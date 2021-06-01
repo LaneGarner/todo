@@ -1,6 +1,6 @@
-// import {createStore, applyMiddleware} from 'redux';
-// import thunk from 'redux-thunk';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
 
-// import {users} from './reducer/user';
+import {todos} from './reducer/todos';
 
-// export default createStore(users, applyMiddleware(thunk));
+export default createStore(todos, applyMiddleware(thunk));
