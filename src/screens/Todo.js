@@ -7,9 +7,12 @@ import Icon from 'react-native-vector-icons/Feather';
 import {getTodos} from '../store/action/todos';
 import {Item} from '../components/Item';
 import {theme} from '../utils/theme';
+import store from '../store';
 
 export const Todo = props => {
   const todos = useSelector(state => state.todos);
+  const todoList = store.getState().todos;
+  console.log('todolist: ', todoList);
   const dispatch = useDispatch();
   const loadTodos = () => dispatch(getTodos());
 
@@ -56,7 +59,7 @@ export const Todo = props => {
         onPress={gotoNewTodos}
       />
       <Text style={styles.myTodoListHeader}>my todo list:</Text>
-      {todos !== null && todos.length === 0 ? (
+      {todos !== null && todoList && todos.length === 0 ? (
         <View style={styles.noTodos}>
           <Text style={styles.noTodosText}>there are no todos!</Text>
         </View>
@@ -73,7 +76,6 @@ export const Todo = props => {
       )}
     </View>
   );
-  r;
 };
 
 const styles = StyleSheet.create({

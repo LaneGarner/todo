@@ -26,7 +26,7 @@ export const Item = props => {
   };
 
   return (
-    <View style={styles.todoItem}>
+    <View key={props.key} style={styles.todoItem}>
       <View
         style={showSettings ? styles.todoItemShrink : styles.todoItemExpand}>
         <Text style={props.item.status ? styles.completedText : styles.text}>

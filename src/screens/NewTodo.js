@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import {StyleSheet, View, TextInput} from 'react-native';
 import {Navigation} from 'react-native-navigation';
 import {useDispatch} from 'react-redux';
+import {getState} from 'redux';
 
 import {addTodo} from '../store/action/todos';
 import {Button} from '../components/Button';
 import {theme} from '../utils/theme';
+import store from '../store';
 
 export const NewTodo = props => {
   const [inputValue, setInputValue] = useState('');
@@ -17,7 +19,9 @@ export const NewTodo = props => {
   const addItem = () => dispatch(addTodo(inputValue));
 
   const gotoTodos = () => Navigation.pop(props.componentId);
+  // console.log(store.getState());
 
+  // const currentState = store.getState();
   const handleAddItem = () => {
     addItem(inputValue);
     gotoTodos();
