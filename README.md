@@ -1,7 +1,15 @@
 # todo
 
-## planning:
+## about
 
-<a href="https://trello.com/b/EzTIjUPm/todo">trello board</a>
+todo is a simple app to keep track of all of your todos. if you finish your todos you will be greeted by message to let you know!
 
-<a href="https://www.figma.com/file/fngFHB3QWlQptvD6Efj1An/todo?node-id=0%3A1">figma</a>
+## instructions
+
+1. click the giant plus sign on the home screen to add a new todo
+2. type your todo and press add
+3. once you've added one (or more) todos, you can click the three dots in the right corner to change the todo
+
+- press the checkmark to complete an item
+- press the pencil to edit an item
+- press the x to remove an item from the list forever
